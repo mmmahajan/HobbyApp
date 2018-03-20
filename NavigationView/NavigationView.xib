@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="NavigationView" customModule="INFS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPY-mE-q1x">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eju-9p-q9p">
+                            <rect key="frame" x="15" y="25" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="0eL-cP-lWv"/>
+                                <constraint firstAttribute="width" constant="25" id="r5g-dN-5cn"/>
+                            </constraints>
+                            <state key="normal" image="humbergerIcon"/>
+                            <connections>
+                                <action selector="leftButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="INd-ws-msB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnW-KW-E84">
+                            <rect key="frame" x="280" y="25" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="Fyp-KN-Grw"/>
+                                <constraint firstAttribute="height" constant="25" id="OTl-Wm-zlo"/>
+                            </constraints>
+                            <state key="normal" image="searchIcon"/>
+                            <connections>
+                                <action selector="rightButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zw6-Sw-NvZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w3-0v-UB6">
+                            <rect key="frame" x="247" y="25" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="12n-gM-n8x"/>
+                                <constraint firstAttribute="height" constant="25" id="3DC-Ty-Zi9"/>
+                            </constraints>
+                            <state key="normal" image="searchIcon"/>
+                            <connections>
+                                <action selector="rightLeftMostButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="MYG-Uo-fkL"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zme-5y-rNq">
+                            <rect key="frame" x="136" y="28" width="49" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.19607843137254902" green="0.23137254901960785" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <searchBar hidden="YES" contentMode="redraw" placeholder="Search book here" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb1-yI-eaI">
+                            <rect key="frame" x="40" y="8.5" width="240" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="PXs-vH-ur2"/>
+                            </constraints>
+                            <color key="tintColor" red="0.2666666667" green="0.1960784314" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                            <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="UIImage"/>
+                            </userDefinedRuntimeAttributes>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="FnW-KW-E84" firstAttribute="leading" secondItem="3w3-0v-UB6" secondAttribute="trailing" constant="8" id="1VI-bD-0gO"/>
+                        <constraint firstItem="gb1-yI-eaI" firstAttribute="leading" secondItem="eju-9p-q9p" secondAttribute="trailing" id="8gc-8f-IXL"/>
+                        <constraint firstItem="eju-9p-q9p" firstAttribute="leading" secondItem="FPY-mE-q1x" secondAttribute="leading" constant="15" id="KJn-lT-V9c"/>
+                        <constraint firstItem="zme-5y-rNq" firstAttribute="centerY" secondItem="3w3-0v-UB6" secondAttribute="centerY" id="MWB-TL-x7c"/>
+                        <constraint firstItem="eju-9p-q9p" firstAttribute="top" secondItem="FPY-mE-q1x" secondAttribute="top" constant="25" id="PMP-Za-aTv"/>
+                        <constraint firstItem="zme-5y-rNq" firstAttribute="centerX" secondItem="FPY-mE-q1x" secondAttribute="centerX" id="RdG-5j-vLa"/>
+                        <constraint firstItem="FnW-KW-E84" firstAttribute="leading" secondItem="gb1-yI-eaI" secondAttribute="trailing" id="Rjw-Zn-ZfG"/>
+                        <constraint firstAttribute="trailing" secondItem="FnW-KW-E84" secondAttribute="trailing" constant="15" id="Sbg-pL-vh5"/>
+                        <constraint firstItem="3w3-0v-UB6" firstAttribute="centerY" secondItem="FnW-KW-E84" secondAttribute="centerY" id="hR3-iE-R3i"/>
+                        <constraint firstItem="gb1-yI-eaI" firstAttribute="centerY" secondItem="zme-5y-rNq" secondAttribute="centerY" constant="-1" id="iOR-HF-JUk"/>
+                        <constraint firstItem="FnW-KW-E84" firstAttribute="centerY" secondItem="eju-9p-q9p" secondAttribute="centerY" id="vVz-GE-4RN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FPY-mE-q1x" secondAttribute="bottom" id="g5P-rJ-f4V"/>
+                <constraint firstItem="FPY-mE-q1x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="p5q-ms-EV0"/>
+                <constraint firstItem="FPY-mE-q1x" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pr8-TF-coM"/>
+                <constraint firstItem="FPY-mE-q1x" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="yVO-De-9d3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftButton" destination="eju-9p-q9p" id="TSh-pZ-gQT"/>
+                <outlet property="navigationView" destination="FPY-mE-q1x" id="0nq-69-Qwv"/>
+                <outlet property="rightButton" destination="FnW-KW-E84" id="FDc-zL-voo"/>
+                <outlet property="rightLeftButton" destination="3w3-0v-UB6" id="lUK-Zh-peH"/>
+                <outlet property="searchBar" destination="gb1-yI-eaI" id="90A-iW-Oww"/>
+                <outlet property="title" destination="zme-5y-rNq" id="fqX-1J-JSz"/>
+            </connections>
+            <point key="canvasLocation" x="76" y="-75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="UIImage" width="16" height="16"/>
+        <image name="humbergerIcon" width="40" height="40"/>
+        <image name="searchIcon" width="29" height="29"/>
+    </resources>
+</document>
